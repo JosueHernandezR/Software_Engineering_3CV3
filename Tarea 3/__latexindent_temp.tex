@@ -1,0 +1,138 @@
+\documentclass[12pt,twoside]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{amsmath}
+\usepackage[active]{srcltx}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{makeidx}
+\usepackage{amsthm}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{array}
+\newcolumntype{L}{>{\centering\arraybackslash}m{3cm}}
+\renewcommand{\baselinestretch}{1}
+\setcounter{page}{1}
+\setlength{\textheight}{21.6cm}
+\setlength{\textwidth}{14cm}
+\setlength{\oddsidemargin}{1cm}
+\setlength{\evensidemargin}{1cm}
+\pagestyle{myheadings}
+\thispagestyle{empty}
+\markboth{\small{Josu\'e David Hern\'andez Ram\'irez}}{\small{.}}
+\date{}
+\begin{document}
+\centerline{\bf Ingeniería de Software, Sem: 2021-1, 3CV3, Tarea 3, 4/12/2020}
+\centerline{}
+\centerline{}
+\begin{center}
+\Large{\textsc{Tarea 3: Plan de alcance}}
+\end{center}
+\centerline{}
+\centerline{\bf {Josu\'e David Hern\'andez Ram\'irez.}}
+\centerline{}
+\centerline{Escuela Superior de C\'omputo}
+\centerline{Instituto Polit\'ecnico Nacional, Ciudad de M\'exico}
+\centerline{$jhernandezr1605@alumno.ipn.mx$}
+\newtheorem{Theorem}{\quad Theorem}[section]
+\newtheorem{Definition}[Theorem]{\quad Definition}
+\newtheorem{Corollary}[Theorem]{\quad Corollary}
+\newtheorem{Lemma}[Theorem]{\quad Lemma}
+\newtheorem{Example}[Theorem]{\quad Example}
+\bigskip
+
+\section{Statement of Work}
+Es un proyecto para ayudar al gobierno de la ciudad de México a recibir reportes de los
+baches que hay en la ciudad.
+
+\section{Identificación de stakeholder}
+\subsection{Stakeholders internos}
+\begin{itemize}
+    \item \textbf{Analista: }Es el encargo de analizar las necesidades del cliente
+        y traducirlas para que los desarrolladores entiendan que es lo que
+        requiere el cliente y realizarlo.
+    \item \textbf{Desarrollador Frontend: }Es el encargado del desarrollo de
+        interfaz de usuario y la experencia dentro del sistema.
+    \item \textbf{Desarrollador Backend: }Es el encargado de desarrollar
+        la lógica de la aplicación y darle mantenimiento a los servicios que
+        ofrece esta.
+    \item \textbf{Project Manager: }Es la persona encargada de dirigir el proyecto
+        y cumplir las necesidades y requerimientos del cliente y de los usuarios.
+    \item \textbf{Cliente :}Es la persona o empresa a la que vamos a cubrir sus 
+        necesidades mediante el desarrollo de un sistema.
+\end{itemize}
+
+\subsection{Stakeholders externos}
+\begin{itemize}
+    \item \textbf{Jefa de Gobierno: }es el titular del poder ejecutivo de la entidad.
+        Sus funciones están descritas en el artículo 32, apartado C de la Constitución
+        de la Ciudad de México. La dirección en donde se puede encontrar es en Plaza 
+        de la Constitución 2, Centro Histórico de la Cdad. de México, 06000 
+        Cuauhtémoc, CDMX.
+    \item \textbf{SEMOVI: }Se encarga de regular, programar, orientar, organizar, 
+        controlar, aprobar y, en su caso, modificar, la presentación de los servicios 
+        público, mercantil y privado de transporte de pasajeros y de carga en la 
+        Ciudad de México, conforme a lo establecido en la Ley y demás disposiciones 
+        jurídicas y administrativas aplicables; así como también, a las necesidades de 
+        movilidad de la Ciudad, procurando la preservación del medio ambiente y la 
+        seguridad de los usuarios del sistema de movilidad. Se encuentra en Avenida 
+        Álvaro Obregón 269 Colonia Roma Norte, Alcaldía Cuauhtémoc C.P. 06700, Ciudad 
+        de México.
+    \item \textbf{Secretaría de Obras y Servicios: }En esta dependencia del Gobierno 
+        de la Ciudad de México se encarga de establecer la normatividad y las 
+        especificaciones aplicables a la obra pública, concesionada y los servicios 
+        urbanos; planean, proyectan, construyen, mantienen y operan con un 
+        enfoque integral y una visión metropolitana acorde al propósito de garantizar 
+        el desarrollo sustentable. La Secretaría de Obras y Servicios, propone nuevos 
+        estándares de construcción en la obra pública, integra elementos de sustentabilidad, 
+        accesibilidad, elementos modernos que cumplan con las necesidades de una Capital 
+        en crecimiento y desarrollo continuo. Integramos proyectos ejecutivos, construimos 
+        obras cuya planeación, programación y operación corresponde a otras dependencias 
+        del Gobierno de la Ciudad de México, como instalaciones educativas, hospitalarias, 
+        deportivas, culturales, centros de atención social, entre otras. Para lograr una 
+        adecuada coordinación, las distintas dependencias con las que trabajamos se da 
+        un seguimiento programático presupuestal en materia de obras en el Comité de Obras 
+        de la Capital. Se encuentran en Calle Plaza de la Constitución 1, Colonia Centro 
+        (Área 1), Alcaldía Cuauhtémoc, C.P. 06000, Ciudad de México.
+    \item \textbf{Ciudadano: }Son los usuarios finales, a los cuales la propuesta del 
+        sistema va dirigido para ayudar a mejorar la ciudad mediante sus reportes.
+\end{itemize}
+
+\section{Lista de necesidades}
+La siguiente lista de necesidades tiene establecido el nivel de prioridad de 1 a 5,
+siendo 1 alto y 5 bajo. \\
+
+\begin{table}[!hbt]
+        \begin{tabular}{|l|l|l|l|}
+        \hline
+        \multicolumn{1}{|c|}{Id} & \multicolumn{1}{c|}{Nombre} & \multicolumn{1}{c|}{Descripción} & \multicolumn{1}{c|}{Prioridad} \\ \hline
+        \multicolumn{1}{|r|}{N01} & Reportar baches & \begin{tabular}[c]{@{}l@{}}Es necesario implementar una \\ solución para el reporte de estos\end{tabular} & 1 \\ \hline
+        \multicolumn{1}{|r|}{N02} & \begin{tabular}[c]{@{}l@{}}Diferentes tipos de\\ usuario\end{tabular} & \begin{tabular}[c]{@{}l@{}}Debe de existir una calsificación \\ de usuarios\end{tabular} & 2 \\ \hline
+        \multicolumn{1}{|r|}{N03} & Estatus del bache & \begin{tabular}[c]{@{}l@{}}Se debe de mostrar el estatus del \\ bache a los usuarios\end{tabular} & 3 \\ \hline
+        \multicolumn{1}{|r|}{N04} & Ubicación del bache & \begin{tabular}[c]{@{}l@{}}Se debe de tener la ubicación \\ del bache\end{tabular} & 1 \\ \hline
+        \multicolumn{1}{|r|}{N05} & \begin{tabular}[c]{@{}l@{}}Reporte para secretaría \\ de obras\end{tabular} & \begin{tabular}[c]{@{}l@{}}El sistema debe crear un reporte \\ para que se repare el desperfecto\end{tabular} & 2 \\ \hline
+        \multicolumn{1}{|r|}{N06} & Seguridad de datos & \begin{tabular}[c]{@{}l@{}}Los datos de los usuarios deben \\ de estar seguros\end{tabular} & 2 \\ \hline
+        N07 & \begin{tabular}[c]{@{}l@{}}Licencia de \\ Google Maps\end{tabular} & \begin{tabular}[c]{@{}l@{}}Tener el acceso a las API's de \\ google maps para acceder a los \\ servicios de localización\end{tabular} & 2 \\ \hline
+        N08 & Acceso a internet & \begin{tabular}[c]{@{}l@{}}Es necesario tener comunicación \\ con el equipo y el cliente, para ello \\ es necesario contar con este \\ servicio\end{tabular} & 1 \\ \hline
+        N09 & Licencia de MySQL & \begin{tabular}[c]{@{}l@{}}Es necesario tener todos los \\ servicios disponibles de la \\ base de datos.\end{tabular} & 3 \\ \hline
+        N10 & Documentación & \begin{tabular}[c]{@{}l@{}}Para mantener el sistema y \\ mejorarlo con el tiempo, es \\ necesario saber que se hizo \\ para repararlo o mejorarlo\end{tabular} & 4 \\ \hline
+        N11 & Equipo de cómputo & \begin{tabular}[c]{@{}l@{}}Es la herramienta principal para \\ desarrollar el sistema\end{tabular} & 1 \\ \hline
+        N12 & Interfaz amigable & \begin{tabular}[c]{@{}l@{}}Es necesario que el sistema \\ sea de fácil entendimiento \\ para los usuarios.\end{tabular} & 2 \\ \hline
+        \end{tabular}
+        \end{table}
+
+\section{Objetivos específicos}
+\begin{itemize}
+    \item \textbf{Objetivo 1}
+\end{itemize}
+
+\section{Objetivo general del proyecto}
+
+
+\section{Entregables}
+
+
+\section{Lista de requerimientos funcionales y no funcionales}
+
+
+\end{document}
+

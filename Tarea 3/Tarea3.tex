@@ -1,0 +1,229 @@
+\documentclass[12pt,twoside, a4paper]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{amsmath}
+\usepackage[active]{srcltx}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{makeidx}
+\usepackage{amsthm}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{array}
+\usepackage[a4paper]{geometry}
+\usepackage{longtable}
+\geometry{top=1.5cm, bottom=1.0cm, left=1.25cm, right=1.25cm}
+\renewcommand{\baselinestretch}{1}
+\setcounter{page}{1}
+\setlength{\textheight}{21.6cm}
+\setlength{\textwidth}{14cm}
+\setlength{\oddsidemargin}{1cm}
+\setlength{\evensidemargin}{1cm}
+\pagestyle{myheadings}
+\thispagestyle{empty}
+\markboth{\small{Josu\'e David Hern\'andez Ram\'irez}}{\small{.}}
+\date{}
+\begin{document}
+\centerline{\bf Ingeniería de Software, Sem: 2021-1, 3CV3, Tarea 3, 4/12/2020}
+\centerline{}
+\centerline{}
+\begin{center}
+\Large{\textsc{Tarea 3: Plan de alcance}}
+\end{center}
+\centerline{}
+\centerline{\bf {Josu\'e David Hern\'andez Ram\'irez.}}
+\centerline{}
+\centerline{Escuela Superior de C\'omputo}
+\centerline{Instituto Polit\'ecnico Nacional, Ciudad de M\'exico}
+\centerline{$jhernandezr1605@alumno.ipn.mx$}
+\newtheorem{Theorem}{\quad Theorem}[section]
+\newtheorem{Definition}[Theorem]{\quad Definition}
+\newtheorem{Corollary}[Theorem]{\quad Corollary}
+\newtheorem{Lemma}[Theorem]{\quad Lemma}
+\newtheorem{Example}[Theorem]{\quad Example}
+\bigskip
+
+\section{Statement of Work}
+Es un proyecto para ayudar al gobierno de la ciudad de México a recibir reportes de los
+baches que hay en la ciudad.
+
+\section{Identificación de stakeholder}
+\subsection{Stakeholders internos}
+\begin{itemize}
+    \item \textbf{Analista: }Es el encargo de analizar las necesidades del cliente
+        y traducirlas para que los desarrolladores entiendan que es lo que
+        requiere el cliente y realizarlo.
+    \item \textbf{Desarrollador Frontend: }Es el encargado del desarrollo de
+        interfaz de usuario y la experencia dentro del sistema.
+    \item \textbf{Desarrollador Backend: }Es el encargado de desarrollar
+        la lógica de la aplicación y darle mantenimiento a los servicios que
+        ofrece esta.
+    \item \textbf{Project Manager: }Es la persona encargada de dirigir el proyecto
+        y cumplir las necesidades y requerimientos del cliente y de los usuarios.
+    \item \textbf{Cliente :}Es la persona o empresa a la que vamos a cubrir sus 
+        necesidades mediante el desarrollo de un sistema.
+\end{itemize}
+
+\subsection{Stakeholders externos}
+\begin{itemize}
+    \item \textbf{Jefa de Gobierno: }es el titular del poder ejecutivo de la entidad.
+        Sus funciones están descritas en el artículo 32, apartado C de la Constitución
+        de la Ciudad de México. La dirección en donde se puede encontrar es en Plaza 
+        de la Constitución 2, Centro Histórico de la Cdad. de México, 06000 
+        Cuauhtémoc, CDMX.
+    \item \textbf{SEMOVI: }Se encarga de regular, programar, orientar, organizar, 
+        controlar, aprobar y, en su caso, modificar, la presentación de los servicios 
+        público, mercantil y privado de transporte de pasajeros y de carga en la 
+        Ciudad de México, conforme a lo establecido en la Ley y demás disposiciones 
+        jurídicas y administrativas aplicables; así como también, a las necesidades de 
+        movilidad de la Ciudad, procurando la preservación del medio ambiente y la 
+        seguridad de los usuarios del sistema de movilidad. Se encuentra en Avenida 
+        Álvaro Obregón 269 Colonia Roma Norte, Alcaldía Cuauhtémoc C.P. 06700, Ciudad 
+        de México.
+    \item \textbf{Secretaría de Obras y Servicios: }En esta dependencia del Gobierno 
+        de la Ciudad de México se encarga de establecer la normatividad y las 
+        especificaciones aplicables a la obra pública, concesionada y los servicios 
+        urbanos; planean, proyectan, construyen, mantienen y operan con un 
+        enfoque integral y una visión metropolitana acorde al propósito de garantizar 
+        el desarrollo sustentable. La Secretaría de Obras y Servicios, propone nuevos 
+        estándares de construcción en la obra pública, integra elementos de sustentabilidad, 
+        accesibilidad, elementos modernos que cumplan con las necesidades de una Capital 
+        en crecimiento y desarrollo continuo. Integramos proyectos ejecutivos, construimos 
+        obras cuya planeación, programación y operación corresponde a otras dependencias 
+        del Gobierno de la Ciudad de México, como instalaciones educativas, hospitalarias, 
+        deportivas, culturales, centros de atención social, entre otras. Para lograr una 
+        adecuada coordinación, las distintas dependencias con las que trabajamos se da 
+        un seguimiento programático presupuestal en materia de obras en el Comité de Obras 
+        de la Capital. Se encuentran en Calle Plaza de la Constitución 1, Colonia Centro 
+        (Área 1), Alcaldía Cuauhtémoc, C.P. 06000, Ciudad de México.
+    \item \textbf{Ciudadano: }Son los usuarios finales, a los cuales la propuesta del 
+        sistema va dirigido para ayudar a mejorar la ciudad mediante sus reportes.
+\end{itemize}
+
+\section{Lista de necesidades}
+La siguiente lista de necesidades tiene establecido el nivel de prioridad de 1 a 5,
+siendo 1 alto y 5 bajo.
+
+\begin{table}[!hbt]
+    \begin{center}
+    \begin{tabular}{|l|l|l|c|}
+        \hline
+        \multicolumn{1}{|c|}{Id} & \multicolumn{1}{c|}{Nombre} & \multicolumn{1}{c|}{Descripción} & \multicolumn{1}{c|}{Prioridad} \\ \hline
+        \multicolumn{1}{|r|}{N01} & Reportar baches & \begin{tabular}[c]{@{}l@{}}Es necesario implementar una \\ solución para el reporte de estos\end{tabular} & 1 \\ \hline
+        \multicolumn{1}{|r|}{N02} & \begin{tabular}[c]{@{}l@{}}Diferentes tipos de\\ usuario\end{tabular} & \begin{tabular}[c]{@{}l@{}}Debe de existir una calsificación \\ de usuarios\end{tabular} & 2 \\ \hline
+        \multicolumn{1}{|r|}{N03} & Estatus del bache & \begin{tabular}[c]{@{}l@{}}Se debe de mostrar el estatus del \\ bache a los usuarios\end{tabular} & 3 \\ \hline
+        \multicolumn{1}{|r|}{N04} & Ubicación del bache & \begin{tabular}[c]{@{}l@{}}Se debe de tener la ubicación \\ del bache\end{tabular} & 1 \\ \hline
+        \multicolumn{1}{|r|}{N05} & \begin{tabular}[c]{@{}l@{}}Reporte para secretaría \\ de obras\end{tabular} & \begin{tabular}[c]{@{}l@{}}El sistema debe crear un reporte \\ para que se repare el desperfecto\end{tabular} & 2 \\ \hline
+        \multicolumn{1}{|r|}{N06} & Seguridad de datos & \begin{tabular}[c]{@{}l@{}}Los datos de los usuarios deben \\ de estar seguros\end{tabular} & 2 \\ \hline
+        N07 & \begin{tabular}[c]{@{}l@{}}Licencia de \\ Google Maps\end{tabular} & \begin{tabular}[c]{@{}l@{}}Tener el acceso a las API's de \\ google maps para acceder a los \\ servicios de localización\end{tabular} & 2 \\ \hline
+        N08 & Acceso a internet & \begin{tabular}[c]{@{}l@{}}Es necesario tener comunicación \\ con el equipo y el cliente, para ello \\ es necesario contar con este \\ servicio\end{tabular} & 1 \\ \hline
+        N09 & Licencia de MySQL & \begin{tabular}[c]{@{}l@{}}Es necesario tener todos los \\ servicios disponibles de la \\ base de datos.\end{tabular} & 3 \\ \hline
+        N10 & Documentación & \begin{tabular}[c]{@{}l@{}}Para mantener el sistema y \\ mejorarlo con el tiempo, es \\ necesario saber que se hizo \\ para repararlo o mejorarlo\end{tabular} & 4 \\ \hline
+        N11 & Equipo de cómputo & \begin{tabular}[c]{@{}l@{}}Es la herramienta principal para \\ desarrollar el sistema\end{tabular} & 1 \\ \hline
+        N12 & Interfaz amigable & \begin{tabular}[c]{@{}l@{}}Es necesario que el sistema \\ sea de fácil entendimiento \\ para los usuarios.\end{tabular} & 2 \\ \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\section{Objetivos específicos}
+\begin{itemize}
+    \item Adquirir equipo de cómputo para el desarrollo del sistema.
+    \item Adquirir la licencia de MySQL para agregar funcionalidades y seguridad
+        a la base de datos.
+    \item Adquirir la licencia de Google Maps para ubicar mas preciso los baches.
+    \item Crear grupos de usuarios para definir las características del sistema.
+    \item Desarrollar la estructura de los reportes de baches para que el usuario 
+        pueda hacer los reportes.
+    \item Definir el estatus del bache para saber en que nivel del proceso se encuentra.
+    \item Desarrollar los reportes de la secretaría de obras para que realicen la 
+        reparación del bache.
+    \item Realizar los protocolos de la seguridad de los datos para que no sean
+        vulnerables.
+    \item Contratar buenos servicios de internet para que el equipo de desarrollo 
+        se encuentre comunicado y pueda realizar el proyecto.
+    \item Realizar documentación del proyecto para saber que se ha realizado y que
+        se pueda mejorar en un futuro.
+    \item Desarrollar una interfaz amigable para que el sistema sea entendible e 
+        intuitivo.
+\end{itemize}
+
+\section{Objetivo general del proyecto}
+
+Desarrollar un sistema donde se pueda saber la ubicación de los baches en la Ciudad de México
+y puedan ser reparados por la secretaría de obras y servicios o por el sector privado
+para tener mejores vialidades dando como resultado una mejor apariencia y sobre todo
+reducir los accidentes vehículares.
+\newpage
+\section{Entregables}
+
+\begin{enumerate}
+    \item Inventario de los equipos de cómputo.
+    \item Equipos listos para el equipo de desarrollo.
+    \item Recibo de pago de internet.
+    \item Uso de mapas en el proyecto.
+    \item Documentos para realizar la reparación del bache.
+    \item Aplicación limpia y amigable para el usuario.
+    \item Diferente versión del sistema acorde al tipo de usuario.
+    \item Documentación del sistema.
+    \item Documento de analisis y diseño del sistema.
+    \item Diseño del sistema.
+    \item Desarrollo del sistema.
+    \item Código del sistema funcional.
+    \item Página web del sistema.
+    \item Documentación de la seguridad de la base de datos.
+    \item Mapa para ubicar el bache.
+    \item Reporte de los baches reparados.
+    \item Vista del estatus de los reportes de los usuarios.
+    \item Historial de los reportes generados.
+\end{enumerate}
+\newpage
+\section{Lista de requerimientos funcionales y no funcionales}
+
+\subsection{Requerimientos funcionales}
+\begin{longtable}{|l|l|}
+    \caption{Requerimientos funcionales} \label{tab:req1}\\
+    \hline
+    Nombre & Descripción \\ \hline
+    \endfirsthead
+    Login & \begin{tabular}[c]{@{}l@{}}El sistema debe tener un login para \\ identificar a los usuarios.\end{tabular} \\ \hline
+    Usuarios & \begin{tabular}[c]{@{}l@{}}El sistema debe tener dos tipos de\\ usuarios.\end{tabular} \\ \hline
+    Alcaldías & \begin{tabular}[c]{@{}l@{}}Los gestores deben obtener la \\ información de acuerdo a la \\ alcaldía a la que pertenecen.\end{tabular} \\ \hline
+    Bases de datos & \begin{tabular}[c]{@{}l@{}}El sistema debe tener una base de\\ datos que almacene los reportes\\ del usuario.\end{tabular} \\ \hline
+    Pantallas & \begin{tabular}[c]{@{}l@{}}El sistema debe tener pantallas\\ personalizadas de acuerdo con\\ cada aplicación del sistema.\end{tabular} \\ \hline
+    Gestión de reportes & \begin{tabular}[c]{@{}l@{}}El sistema permitirá agregar y\\ visualizar los reportes a los \\ usuarios.\end{tabular} \\ \hline
+    Estados & \begin{tabular}[c]{@{}l@{}}Los estados que el sistema\\ permitirá para cada reporte son:\\ recibido, pendiente de validación,\\ rechazado o validado, en progreso\\ de reparación y terminado.\end{tabular} \\ \hline
+    Servidor & \begin{tabular}[c]{@{}l@{}}El sistema debe tener una\\ arquitectura cliente servidor usando\\ REST API.\end{tabular} \\ \hline
+    Almacenamiento & \begin{tabular}[c]{@{}l@{}}El sistema debe de almacenar\\ todos los usuarios y contraseñas.\end{tabular} \\ \hline
+    Información de usuario & \begin{tabular}[c]{@{}l@{}}El sistema debe de almacenar la\\ siguiente información del usuario:\\ nombre, apellidos, email, \\ contraseña, CURP, fecha de\\ nacimiento, tipo, delegación.\end{tabular} \\ \hline
+    Información de reporte & \begin{tabular}[c]{@{}l@{}}El sistema debe de almacenar\\ la siguiente información: ubicación\\ (calle, número, calles entre las que\\ se encuentra, CP, colonia, alcaldía),\\ descripción y foto del bache.\end{tabular} \\ \hline
+\end{longtable}
+
+\subsection{Requerimientos no funcionales}
+\begin{longtable}{|l|l|}
+    \caption{Requerimientos no funcionales} \label{tab:req2} \\
+    \hline
+    Nombre & Descripción \\ \hline
+    \endfirsthead
+    Eficiente & \begin{tabular}[c]{@{}l@{}}El sistema debe de hacer N \\ transacciones por segundo.\end{tabular} \\ \hline
+    Rápido & \begin{tabular}[c]{@{}l@{}}El sistema debe de responder en las \\ transacciones y registros en menos \\ de 10 seg.\end{tabular} \\ \hline
+    Legal & \begin{tabular}[c]{@{}l@{}}El sistema debe tener avisos legales \\ sobre sus usos.\end{tabular} \\ \hline
+    Normas & \begin{tabular}[c]{@{}l@{}}El sistema debe cumplir las normas \\ ya establecidas del país o del estado \\ para su uso.\end{tabular} \\ \hline
+    Estándares & \begin{tabular}[c]{@{}l@{}}El sistema debe de cumplir los \\ estándares de calidad a los que esté \\ sometido.\end{tabular} \\ \hline
+    Datos & \begin{tabular}[c]{@{}l@{}}Los datos modificados deben de ser \\ actualizados en menos de 2 segundos \\ para los usuarios.\end{tabular} \\ \hline
+    Permisos & \begin{tabular}[c]{@{}l@{}}Los permisos del sistema los asigna \\ el jefe de sistemas general y/o el \\ jefe de sistemas regional.\end{tabular} \\ \hline
+    Seguridad & \begin{tabular}[c]{@{}l@{}}El sistema debe desarrollarse \\ aplicando patrones y \\ recomendaciones de \\ programación que incrementen \\ la seguridad de datos.\end{tabular} \\ \hline
+    Respaldo & \begin{tabular}[c]{@{}l@{}}Las bases de datos deben \\ respaldarse cada 24 horas. \\ Los respaldos deben de resguardarse \\ en una localidad segura ubicada en \\ lugares distintos donde resida el \\ sistema.\end{tabular} \\ \hline
+    Cifrado & \begin{tabular}[c]{@{}l@{}}Todas las comunicaciones del \\ sistema deben de estar cifradas \\ por algún algoritmo cifrado.\end{tabular} \\ \hline
+    \begin{tabular}[c]{@{}l@{}}Familiarización del \\ sistema\end{tabular} & \begin{tabular}[c]{@{}l@{}}El tiempo de aprendizaje del \\ sistema por un usuario debe \\ de aproximadamente 5 minutos.\end{tabular} \\ \hline
+    Cifrado & \begin{tabular}[c]{@{}l@{}}Todas las comunicaciones del \\ sistema deben de estar cifradas \\ por algún algoritmo cifrado.\end{tabular} \\ \hline
+    \begin{tabular}[c]{@{}l@{}}Familiarización   \\ del sistema\end{tabular} & \begin{tabular}[c]{@{}l@{}}El tiempo de   aprendizaje del sistema \\ por un usuario debe de \\ aproximadamente 5 minutos.\end{tabular} \\ \hline
+    Manuales & \begin{tabular}[c]{@{}l@{}}Los manuales de usuario deben de \\ estar estructurados adecuadamente \\ de manera física y dentro del sistema.\end{tabular} \\ \hline
+    Mensajes de   error & \begin{tabular}[c]{@{}l@{}}Los mensajes de errores deben de \\ ser informativos y orientados al \\ usuario final.\end{tabular} \\ \hline
+    Interfaces & \begin{tabular}[c]{@{}l@{}}Las interfaces gráficas deben de estar \\ bien formadas y con diseño similar \\ al del gobierno de la CDMX.\end{tabular} \\ \hline
+    Sistema web & \begin{tabular}[c]{@{}l@{}}La plataforma en que el sistema debe \\ de desarrollarse es Web.\end{tabular} \\ \hline
+    \begin{tabular}[c]{@{}l@{}}Formato de direcciones \\ de correo\end{tabular} & \begin{tabular}[c]{@{}l@{}}Todas las direcciones de correo \\ deberán estar en el formato\\ establecido por el estándar RFC \\ 3696 de la IETF.\end{tabular} \\ \hline
+    Normativas & \begin{tabular}[c]{@{}l@{}}Las normativas para cumplirse \\ son las ISO 15504, ISO 20000, \\ ISO 27001.\end{tabular} \\ \hline
+
+\end{longtable}
+
+\end{document}
+
